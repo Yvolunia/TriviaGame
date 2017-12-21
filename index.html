@@ -1,1 +1,204 @@
+<!-- About Page - Page 1 -->
+
+<!doctype html>
+<html lang="en-us">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Link to jQuery library-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Added a link to Bootstrap-->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+ <!-- Added a link to Stylesheets-->
+<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+<head>
+  <title>Crystals Collector</title>
+</head>
+
+<body>
+
+ <!-- Title -->
+
+<div class="row">
+      <div class="col-sm-4">
+        <div id="titleRow">
+         <h3>Totally Trivial Trivia!</h3>  
+       </div>
+     </div>
+</div>
+
+<!-- Instructions -->
+
+<div class="row">
+      <div class="col-sm-6">
+        <div id="instructions">
+
+        <p>You will be given a random number at the start of the game.</p>
+
+        <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+
+        <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
+
+        <p>The value of each crystal is hidden until you click on it.</p>
+
+        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+        </div>
+      </div>
+  </div>
+
+  <!--Original Number and Stats -->
+
+  <div class="row">
+        
+      <div class="col-sm-2">
+        <div id="playButton">
+           <button id="button-1" class="btn btn-primary number" value="play"><h3>Play</h3></button>
+        </div>
+      </div>
+
+      <div class="col-sm-2">
+        <div id="originalNumber">
+          <h2 id="originalRandom"></h2>
+        </div>
+      </div>
+    
+      <div class="col-sm-2">
+        <div id="stats">
+          <p>Wins and Losses</p>
+        </div>
+      </div>
+    
+  </div>
+
+<!-- Crystal Play Buttons -->
+
+  <div class="play-buttons">
+
+                   <button id="yellow" class="btn btn-default clear" value="1"><img width=175 height=175 src="./assets/images/Yellow Crystal.jpg"></button>
+
+                    <button id="green" class="btn btn-default clear" value="2"><img width=175 height=175 src="./assets/images/newgreen.jpeg"></button>
+
+                    <button id="white" class="btn btn-default clear" value="3"><img width=175 height=175 src="./assets/images/newwhite.jpeg"></button>
+                    
+                    <button id="blue" class="btn btn-default clear" value="4"><img width=175 height=175 src="./assets/images/newbluejpeg.jpeg"></button>
+    </div>
+
+<!-- User Guess Final Number -->
+
+  <div class="row">
+      <div class="col-sm-2">
+        <div id="totalScore">
+          <p>Total Score:</p>
+        </div>
+      </div>
+    </div>
+
+ <div class="row">
+      <div class="col-sm-2">
+        <h3 id="finalNumber">
+        </h3>
+      </div>
+    </div>
+
+<!-- Sript -->
+
+  <script type="text/javascript">
+
+  $(document).ready(function() {
+
+// Variables
+
+var x;
+var yellow;
+var green;
+var white;
+var blue;
+var result;
+var wins = 0;
+var losses = 0;
+var isButtonClicked;
+var isCalculated;
+
+// Initialize function to generate random numbers
+
+function initialize() {
+  var x = "";
+  var yellow = "";
+  var green = "";
+  var white = "";
+  var blue = "";
+  var result = "";
+  isButtonClicked = false;
+  isCalculated = false;
+
+  $("originalRandom").empty();
+} // End initialize
+
+// Click Play to set Random Numbers
+
+$("#playButton").on("click", function() {
+  var x = Math.floor((Math.random() * 119) +1);
+  document.getElementById("originalRandom").innerHTML = x;
+  var result = 0;
+  document.getElementById("finalNumber").innerHTML = result;
+  console.log(result)
+  var yellow =  Math.floor((Math.random() * 11) + 1);
+  console.log(yellow);
+  var green =  Math.floor((Math.random() * 11) + 1);
+  console.log(green);
+  var white =  Math.floor((Math.random() * 11) + 1);
+  console.log(white);
+  var blue =  Math.floor((Math.random() * 11) + 1);
+  console.log(blue);
+
+ })
+
+// Wins and Losses
+
+if (result > 0 && result === x) {
+  alert(You win!);
+}
+
+else if (result > 0 && result > x) {
+  alert(You lose!);
+}
+
+else if (result > 0 && result < x) {
+
+  $("#yellow").on('click', function(){
+      if (yellow){
+        result = result + yellow;
+        document.getElementById("finalNumber").innerHTML = result;
+}
+
+
+  $("#green").on('click', function(){
+      if (green){
+        result = result + green;
+        document.getElementById("finalNumber").innerHTML = result;
+}
+
+  $("#white").on('click', function(){
+      if (white){
+        result = result + white;
+        document.getElementById("finalNumber").innerHTML = result;
+}
+
+
+  $("#blue").on('click', function(){
+      if (blue){
+        result = result + blue;
+        document.getElementById("finalNumber").innerHTML = result;
+      }
+
+    }
+
+
+</script>
+
+</body>
+
+</html>
+
 

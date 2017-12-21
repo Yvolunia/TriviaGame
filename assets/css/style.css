@@ -1,1 +1,84 @@
-style.css
+
+
+body {
+  background: url(../images/72502123b.png);
+  background-color: #ccffcc;
+}
+
+.play-buttons {
+	padding: 25px;
+}
+
+#titleRow {
+	padding: 25px;
+	margin-left: 25px;
+	text-align: left;
+	height: 75px;
+	background-color: #ffcc00;
+	color: white;
+}
+
+#instructions {
+	margin-left: 25px;
+	margin-top: 25px;
+	padding: 25px;
+	text-align: left;
+	height: 285px;
+	background-color: #fff7e6;
+	font-weight: bold;
+	color: #4dc3ff;
+}
+
+#playButton {
+	padding: 25px;
+	margin-left: 25px;
+	margin-top: 25px;
+	text-align: center;
+
+}
+
+#originalNumber {
+	padding: 25px;
+	margin-left: 25px;
+	margin-top: 25px;
+	text-align: center;
+	height: 100px;
+	background-color: #00cc99;
+	font-weight: bold;
+	color: white;
+}
+
+
+#stats {
+	padding: 25px;
+	margin-left: 15px;
+	margin-top: 25px;
+	text-align: left;
+	height: 100px;
+	background-color: #ffcc00;
+	color: white;
+	font-weight: bold;
+}
+
+#totalScore {
+	margin-left: 25px;
+	margin-top: 10px;
+	padding-top: 6px;
+	padding-left: 6px;
+	text-align: left;
+	height: 30px;
+	background-color: #00cc99;
+	font-weight: bold;
+	color: white;
+}
+
+#finalNumber {
+	padding: 25px;
+	margin-left: 25px;
+	margin-top: 25px;
+	text-align: center;
+	height: 100px;
+	background-color: #00cc99;
+	font-weight: bold;
+	color: white;
+}
