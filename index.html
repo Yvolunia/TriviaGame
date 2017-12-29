@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
 <head>
-  <title>Crystals Collector</title>
+  <title>Trivia Game</title>
 </head>
 
 <body>
@@ -21,182 +21,115 @@
  <!-- Title -->
 
 <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-6">
         <div id="titleRow">
-         <h3>Totally Trivial Trivia!</h3>  
+         <h3>Old School Trivia!</h3>  
        </div>
      </div>
+
+     <div class="col-sm-2">
+        <h3 id="timer">Timer</h3>
+      </div>
+
+      <div class="col-sm-2">
+        <h3 id="score">Results</h3>
+      </div>
+
 </div>
 
-<!-- Instructions -->
+<!-- Questions -->
 
 <div class="row">
-      <div class="col-sm-6">
-        <div id="instructions">
+      <div class="col-sm-10">
+        <div id="ques1">
 
-        <p>You will be given a random number at the start of the game.</p>
+        <p>Which country is on the western border of Romania and the easter border of Austria?</p>
 
-        <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+        <input type="radio" name="q1" value="a"> Czech Republic
+        <input type="radio" name="q1" value="b">Serbia
+        <input type="radio" name="q1" value="c">Hungary
+        <input type="radio" name="q1" value="d">Ukraine
 
-        <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
-
-        <p>The value of each crystal is hidden until you click on it.</p>
-
-        <p>Each time when the game starts, the game will change the values of each crystal.</p>
-        </div>
       </div>
+    </div>
   </div>
 
-  <!--Original Number and Stats -->
 
-  <div class="row">
-        
-      <div class="col-sm-2">
-        <div id="playButton">
-           <button id="button-1" class="btn btn-primary number" value="play"><h3>Play</h3></button>
-        </div>
-      </div>
+<div class="row">
+    <div class="col-sm-10">
+      <div id="ques2">
 
-      <div class="col-sm-2">
-        <div id="originalNumber">
-          <h2 id="originalRandom"></h2>
-        </div>
+        <p>Who played Gandolf in Peter Jackson's <em>Lord of the Rings</em> films?</p>
+
+        <input type="radio" name="q2" value="a"> Ian McKellen
+        <input type="radio" name="q2" value="b">Christopher Lee
+        <input type="radio" name="q2" value="c">Ian Holm
+        <input type="radio" name="q2" value="d">Viggo Mortenson
+
       </div>
-    
-      <div class="col-sm-2">
-        <div id="stats">
-          <p>Wins and Losses</p>
-        </div>
-      </div>
-    
+    </div>
   </div>
 
-<!-- Crystal Play Buttons -->
+<div class="row">
+   <div class="col-sm-10">
+      <div id="ques3">
 
-  <div class="play-buttons">
+        <p>Who was the U.S. president during World War I?</p>
 
-                   <button id="yellow" class="btn btn-default clear" value="1"><img width=175 height=175 src="./assets/images/Yellow Crystal.jpg"></button>
+        <input type="radio" name="q3" value="a"> Franklin D. Roosevelt
+        <input type="radio" name="q3" value="b">Calvin Coolidge
+        <input type="radio" name="q3" value="c">Theordore Roosevelt
+        <input type="radio" name="q3" value="d">Woodrow Wilson
 
-                    <button id="green" class="btn btn-default clear" value="2"><img width=175 height=175 src="./assets/images/newgreen.jpeg"></button>
-
-                    <button id="white" class="btn btn-default clear" value="3"><img width=175 height=175 src="./assets/images/newwhite.jpeg"></button>
-                    
-                    <button id="blue" class="btn btn-default clear" value="4"><img width=175 height=175 src="./assets/images/newbluejpeg.jpeg"></button>
-    </div>
-
-<!-- User Guess Final Number -->
-
-  <div class="row">
-      <div class="col-sm-2">
-        <div id="totalScore">
-          <p>Total Score:</p>
         </div>
       </div>
     </div>
 
- <div class="row">
-      <div class="col-sm-2">
-        <h3 id="finalNumber">
-        </h3>
+<div class="row">
+      <div class="col-sm-10">
+       <div id="ques4">
+
+        <p>What children's story features Wilbur the pig and a friendly spider?</p>
+
+        <input type="radio" name="q4" value="a"> <em>A Day No Pigs Would Die</em>
+        <input type="radio" name="q4" value="b"><em>Charlotte's Web</em>
+        <input type="radio" name="q4" value="c">"The Three Little Pigs"
+        <input type="radio" name="q4" value="d"><em>Animal Farm</em>
+
       </div>
     </div>
+  </div>
 
-<!-- Sript -->
+<div class="row">
+      <div class="col-sm-10">
+       <div id="ques5">
 
-  <script type="text/javascript">
+        <p>In humans, what is the only internal organ capable of regenerating lost tissue?</p>
 
-  $(document).ready(function() {
+        <input type="radio" name="q5" value="a">liver
+        <input type="radio" name="q5" value="b">brain
+        <input type="radio" name="q5" value="c">heart
+        <input type="radio" name="q5" value="d">lungs
 
-// Variables
+      </div>
+    </div>
+  </div>
 
-var x;
-var yellow;
-var green;
-var white;
-var blue;
-var result;
-var wins = 0;
-var losses = 0;
-var isButtonClicked;
-var isCalculated;
+  <div class="row">
+      <div class="col-sm-10">
+       <div id="ques6">
 
-// Initialize function to generate random numbers
+        <p>Which of these teams just missed making the 2018 Collge Football Playoffs?</p>
 
-function initialize() {
-  var x = "";
-  var yellow = "";
-  var green = "";
-  var white = "";
-  var blue = "";
-  var result = "";
-  isButtonClicked = false;
-  isCalculated = false;
+        <input type="radio" name="q6" value="a">Alabama
+        <input type="radio" name="q6" value="b">Georgia
+        <input type="radio" name="q6" value="c">Ohio State
+        <input type="radio" name="q6" value="d">Clemson
 
-  $("originalRandom").empty();
-} // End initialize
-
-// Click Play to set Random Numbers
-
-$("#playButton").on("click", function() {
-  var x = Math.floor((Math.random() * 119) +1);
-  document.getElementById("originalRandom").innerHTML = x;
-  var result = 0;
-  document.getElementById("finalNumber").innerHTML = result;
-  console.log(result)
-  var yellow =  Math.floor((Math.random() * 11) + 1);
-  console.log(yellow);
-  var green =  Math.floor((Math.random() * 11) + 1);
-  console.log(green);
-  var white =  Math.floor((Math.random() * 11) + 1);
-  console.log(white);
-  var blue =  Math.floor((Math.random() * 11) + 1);
-  console.log(blue);
-
- })
-
-// Wins and Losses
-
-if (result > 0 && result === x) {
-  alert(You win!);
-}
-
-else if (result > 0 && result > x) {
-  alert(You lose!);
-}
-
-else if (result > 0 && result < x) {
-
-  $("#yellow").on('click', function(){
-      if (yellow){
-        result = result + yellow;
-        document.getElementById("finalNumber").innerHTML = result;
-}
-
-
-  $("#green").on('click', function(){
-      if (green){
-        result = result + green;
-        document.getElementById("finalNumber").innerHTML = result;
-}
-
-  $("#white").on('click', function(){
-      if (white){
-        result = result + white;
-        document.getElementById("finalNumber").innerHTML = result;
-}
-
-
-  $("#blue").on('click', function(){
-      if (blue){
-        result = result + blue;
-        document.getElementById("finalNumber").innerHTML = result;
-      }
-
-    }
-
-
-</script>
-
+      </div>
+    </div>
+  </div>
+ 
 </body>
 
 </html>
