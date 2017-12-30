@@ -73,6 +73,7 @@ input[type="radio"] {
 #ques6 {
 	margin-left: 30px;
 	margin-top: 10px;
+	margin-bottom: 5px;
 	padding: 25px;
 	text-align: left;
 	background-color: #ff9900;
@@ -87,10 +88,10 @@ input[type="radio"] {
 	margin-top: 10px;
 	text-align: center;
 	height: 75px;
+	font-weight: bold;
 	background-color: black;
 	color: white;
 }
-
 
 #timer {
 	margin-left: 25px;
@@ -111,5 +112,17 @@ input[type="radio"] {
 	height: 75px;
 	background-color: black;
 	font-weight: bold;
+	color: white;
+}
+
+#finalAnswer {
+	margin-left: 30px;
+	background-color: black;
+	color: white;
+
+}
+
+.jumbotron {
+	background-color: black;
 	color: white;
 }

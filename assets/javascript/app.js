@@ -1,27 +1,50 @@
 
-		$("#greenGem").on('click', function(){
-			if (greenNum){
-				scoreNow = scoreNow + greenNum;
-				document.getElementById("scoreNow").innerHTML = scoreNow;
-				scoreKeeper();
+// Timer Functions
 
-				// Crystal Click Functions
+    var number = 50;
 
-$("#yellow").on("click", function() {
-   document.getElementById("finalNumber").innerHTML = yellow;
-   console.log(yellow);
+    var intervalId;
+
+    //  When the stop button gets clicked, run the stop function.
+    $("#finalAnswer").on("click", stop);
+
+    //  The run function sets an interval
+    //  that runs the decrement function once a second.
+    function run() {
+      intervalId = setInterval(decrement, 1000);
+    }
+
+    //  The decrement function.
+    function decrement() {
+
+      //  Decrease number by one.
+      number--;
+
+      //  Show the number in the #show-number tag.
+      $("#timer").html(number);
 
 
-  })
+      //  Once number hits zero...
+      if (number === 0) {
 
-if (result === x) {
+        //  ...run the stop function.
+        stop();
 
-  document.write ("You win!");
-}
+        //  Alert the user that time is up.
+        alert("Time Up!");
+      }
+    }
 
-else if (result > x) {
+    //  The stop function
+    function stop() {
 
-  alert ("You lose!");
-}
+      //  Clears our intervalId
+      //  We just pass the name of the interval
+      //  to the clearInterval function.
+      clearInterval(intervalId);
+    }
 
-});
+    //  Execute the run function.
+    run();
+
+
