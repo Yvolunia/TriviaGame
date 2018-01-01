@@ -94,7 +94,6 @@ input[type="radio"] {
 
 #titleRow {
 	padding: 10px;
-	margin-top: 10px;
 	text-align: center;
 	height: 55px;
 	background-color: black;
@@ -103,7 +102,6 @@ input[type="radio"] {
 
 #timer {
 	margin-left: 25px;
-	margin-top: 10px;
 	padding: 10px;
 	text-align: center;
 	height: 55px;
