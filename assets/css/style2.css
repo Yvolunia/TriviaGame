@@ -14,20 +14,26 @@ input[type="radio"] {
 #ques1 {
 	margin-bottom: 10px;
     margin-left: 30px;
+    margin-right: 550px;
 	margin-top: 10px;
-	padding: 25px;
+	padding: 15px;
 	text-align: left;
 	background-color: #00ccff;
 	font-weight: bold;
 	color: black;
 }
 
+.ans {
+	text-align: left;
+	padding-top: 15px;
+}
 
 #ques2 {
 	margin-bottom: 10px;
 	margin-left: 30px;
+	margin-right: 550px;
 	margin-top: 10px;
-	padding: 25px;
+	padding: 15px;
 	text-align: left;
 	background-color: #ff66ff;
 	font-weight: bold;
@@ -39,8 +45,9 @@ input[type="radio"] {
 #ques3 {
 	margin-bottom: 10px;
 	margin-left: 30px;
+	margin-right: 550px;
 	margin-top: 10px;
-	padding: 25px;
+	padding: 15px;
 	text-align: left;
 	background-color: #ffff00;
 	font-weight: bold;
@@ -51,8 +58,9 @@ input[type="radio"] {
 #ques4 {
 	margin-bottom: 10px;
 	margin-left: 30px;
+	margin-right: 550px;
 	margin-top: 10px;
-	padding: 25px;
+	padding: 15px;
 	text-align: left;
 	background-color: #996633;
 	font-weight: bold;
@@ -62,8 +70,9 @@ input[type="radio"] {
 #ques5 {
 	margin-bottom: 10px;
 	margin-left: 30px;
+	margin-right: 550px;
 	margin-top: 10px;
-	padding: 25px;
+	padding: 15px;
 	text-align: left;
 	background-color: #33cc33;
 	font-weight: bold;
@@ -73,8 +82,9 @@ input[type="radio"] {
 #ques6 {
 	margin-left: 30px;
 	margin-top: 10px;
+	margin-right: 550px;
 	margin-bottom: 5px;
-	padding: 25px;
+	padding: 15px;
 	text-align: left;
 	background-color: #ff9900;
 	font-weight: bold;
@@ -83,12 +93,11 @@ input[type="radio"] {
 
 
 #titleRow {
-	padding: 25px;
+	padding: 10px;
 	margin-left: 25px;
 	margin-top: 10px;
 	text-align: center;
-	height: 75px;
-	font-weight: bold;
+	height: 55px;
 	background-color: black;
 	color: white;
 }
@@ -96,11 +105,10 @@ input[type="radio"] {
 #timer {
 	margin-left: 25px;
 	margin-top: 10px;
-	padding: 25px;
+	padding: 10px;
 	text-align: center;
-	height: 75px;
+	height: 55px;
 	background-color: black;
-	font-weight: bold;
 	color: white;
 }
 
@@ -152,7 +160,7 @@ input[type="radio"] {
 
 
 #finalAnswer {
-	margin-left: 200px;
+	margin-left: 100px;
 	margin-top: 10px;
 	height: 50px;
 	background-color: black;

@@ -9,7 +9,7 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
  <!-- Added a link to Stylesheets-->
 <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
-<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/style2.css">
 
 <head>
   <title>Trivia Game</title>
@@ -33,114 +33,91 @@
 
 <!-- Questions -->
 
-<div name="quiz">
-  <div class="row">
-      <div class="col-sm-10">
-        <div id="ques1">
+<div class="body">
+   <form name="quiz">
+      <div class="questions">
 
+
+      <div id="ques1">
         <p>Which country is on the western border of Romania and the easter border of Austria?</p>
 
         <input type="radio" name="q1" value="a"> Czech Republic
         <input type="radio" name="q1" value="b">Serbia
         <input type="radio" name="q1" value="c">Hungary
-        <input type="radio" name="q1" value="d">Ukraine
-
+        <input type="radio" name="q1" value="d">Ukraine<br>
+        <p class="ans">Answer: Hungary</p>
       </div>
-    </div>
-  </div>
 
-
-<div class="row">
-    <div class="col-sm-10">
+      
       <div id="ques2">
-
         <p>Who played Gandolf in Peter Jackson's <em>Lord of the Rings</em> films?</p>
 
         <input type="radio" name="q2" value="a"> Ian McKellen
         <input type="radio" name="q2" value="b">Christopher Lee
         <input type="radio" name="q2" value="c">Ian Holm
         <input type="radio" name="q2" value="d">Viggo Mortenson
-
+        <p class="ans">Answer: Ian McKellen</p>
       </div>
-    </div>
-  </div>
 
-<div class="row">
-   <div class="col-sm-10">
       <div id="ques3">
-
         <p>Who was the U.S. president during World War I?</p>
 
         <input type="radio" name="q3" value="a"> Franklin D. Roosevelt
         <input type="radio" name="q3" value="b">Calvin Coolidge
         <input type="radio" name="q3" value="c">Theordore Roosevelt
         <input type="radio" name="q3" value="d">Woodrow Wilson
-
-        </div>
+        <p class="ans">Answer: Woodrow Wilson</p>
       </div>
-    </div>
 
-<div class="row">
-      <div class="col-sm-10">
+
        <div id="ques4">
-
         <p>What children's story features Wilbur the pig and a friendly spider?</p>
 
         <input type="radio" name="q4" value="a"> <em>A Day No Pigs Would Die</em>
         <input type="radio" name="q4" value="b"><em>Charlotte's Web</em>
         <input type="radio" name="q4" value="c">"The Three Little Pigs"
         <input type="radio" name="q4" value="d"><em>Animal Farm</em>
-
-      </div>
-    </div>
-  </div>
-
-<div class="row">
-      <div class="col-sm-10">
-       <div id="ques5">
-
+        <p class="ans">Answer: <em>Charlotte's Web</em></p>
+       </div>
+        
+      <div id="ques5">
         <p>In humans, what is the only internal organ capable of regenerating lost tissue?</p>
 
         <input type="radio" name="q5" value="a">liver
         <input type="radio" name="q5" value="b">brain
         <input type="radio" name="q5" value="c">heart
         <input type="radio" name="q5" value="d">lungs
-
+        <p class="ans">Answer: liver</p>
       </div>
-    </div>
-  </div>
 
-  <div class="row">
-      <div class="col-sm-10">
-       <div id="ques6">
 
+      <div id="ques6">
         <p>Which of these teams just missed making the 2018 Collge Football Playoffs?</p>
 
         <input type="radio" name="q6" value="a">Alabama
         <input type="radio" name="q6" value="b">Georgia
         <input type="radio" name="q6" value="c">Ohio State
         <input type="radio" name="q6" value="d">Clemson
+        <p class="ans">Answer: Ohio State</p>
+      </div>
 
       </div>
-    </div>
+    </form>
   </div>
-</div>
+
   
 <div class="row">
   <button type="submit" id="finalAnswer">Submit</button>
-    <div class="col-sm-1" id="right">
-    <p>Correct:<p>
+    <div class="col-sm-2" id="right">
     </div>
-   <div class="col-sm-1" id="wrong">
-   <p>Wrong:</p>
+   <div class="col-sm-2" id="wrong">
   </div>
-  <div class="col-sm-1" id="empty">
-    <p>Unaswered:</p>
+  <div class="col-sm-2" id="empty">
   </div>
 </div>
 
 
-  <<script src="assets/javascript/app.js"></script>
+  <<script src="assets/javascript/app2.js"></script>
 
 </body>
 
