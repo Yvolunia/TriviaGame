@@ -94,7 +94,6 @@ input[type="radio"] {
 
 #titleRow {
 	padding: 10px;
-	margin-left: 25px;
 	margin-top: 10px;
 	text-align: center;
 	height: 55px;
@@ -146,19 +145,6 @@ input[type="radio"] {
 	color: white;
 }
 
-#button-1 {
-	padding-top: 10px;
-	margin-left: 25px;
-	margin-top: 10px;
-	text-align: left;
-	height: 50px;
-	background-color: black;
-	font-weight: bold;
-	color: white;
-}
-
-
-
 #finalAnswer {
 	margin-left: 100px;
 	margin-top: 10px;
@@ -171,4 +157,9 @@ input[type="radio"] {
 .jumbotron {
 	background-color: black;
 	color: white;
+}
+
+.row {
+	margin-top: 30px;
+	margin-left: 15px;
 }
